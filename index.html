@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,400;0,700;1,300;1,700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>SearchEngineFramework</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fancy what the weather like in</h1>
+      <div class="card">
+        <div class="card-body">
+          <form id="city-village-form">
+            <label for="city-village">City / Village</label>
+            <input
+              type="text"
+              placeholder="Enter a city or a village"
+              autofocus="on"
+              id="city-village"
+            />
+            <input type="submit" value="Search" />
+            <button class="coordinatesButton">Current Location</button>
+          </form>
+        </div>
+      </div>
+      <!--Block Dublin and today-->
+      <div class="container-city-data">
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body" id="copyCityVillage">Dublin</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-7" id="todaysDayOfWeek">THU</div>
+                  <div class="col-7" id="todaysDate">02.02.02</div>
+                  <div class="col-7" id="todaysTime">14:22</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Block Currently and features-->
+      <div class="container-currently-temp">
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <span class="formatCurrently"> Currently </span>
+                <span id="degreeValue" class="degrees">20</span>
+                <span class="degrees">˚C</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-7">
+                    <span>Pressure:</span>
+                    <span id="pressureValue"> 2</span>
+                    <span id="pressureMesure">millimeteres of mercury</span>
+                  </div>
+                  <div class="col-7">
+                    <span>Humidity: </span>
+                    <span id="humidityValue">68%</span>
+                  </div>
+                  <div class="col-7">
+                    <span>Wind:</span>
+                    <span id="windValue"> 11km/h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="next-five">Next 5 days</p>
+
+      <div class="container-next-days">
+        <div class="row">
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <ul class="next-days-list">
+                  <li>Fri</li>
+                  <li><img src="media/icon_rain.jpg" alt="icon_rain" /></li>
+                  <li>14˚C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <ul class="next-days-list">
+                  <li>Sat</li>
+                  <li>
+                    <img src="media/icon_sun-cloudy.jpg" alt="icon_rain" />
+                  </li>
+                  <li>16˚C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <ul class="next-days-list">
+                  <li>Sun</li>
+                  <li><img src="media/icon_rain.jpg" alt="icon_rain" /></li>
+                  <li>14˚C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <ul class="next-days-list">
+                  <li>Mon</li>
+                  <li><img src="media/icon_clouds.jpg" alt="icon_rain" /></li>
+                  <li>14˚C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <ul class="next-days-list">
+                  <li>Tue</li>
+                  <li><img src="media/icon_rains.jpg" alt="icon_rain" /></li>
+                  <li>14˚C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--container-->
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
